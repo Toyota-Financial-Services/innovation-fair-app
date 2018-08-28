@@ -1,0 +1,58 @@
+{
+  "name": "einstein-vision-node",
+  "version": "1.0.0",
+  "description": "Salesforce Einstein Vision demo in Node.js",
+  "engines": {
+    "node": "6.11.x"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/run",
+    "heroku-postbuild": "cd react-ui/ && npm install --only=dev && npm install && npm run build",
+    "test": "ava"
+  },
+  "cacheDirectories": [
+    "node_modules",
+    "react-ui/node_modules"
+  ],
+  "dependencies": {
+    "cloudinary": "^1.4.4",
+    "connect-multiparty": "^2.0.0",
+    "episode-7": "^1.1.0",
+    "express": "^4.15.2",
+    "form-data": "^2.1.1",
+    "fs-promise": "^1.0.0",
+    "fs-readfile-promise": "^3.0.0",
+    "image-size": "^0.5.1",
+    "jsonwebtoken": "^7.1.9",
+    "mathjs": "^3.9.3",
+    "pify": "^2.3.0",
+    "request": "^2.78.0",
+    "request-promise": "^4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/einstein-vision-node.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express",
+    "salesforce",
+    "metamind",
+    "react"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "mock-fs": "^3.12.1",
+    "mountfs": "^0.4.2",
+    "rewire": "^2.5.2"
+  },
+  "ava": {
+    "files": [
+      "**/*.test.js",
+      "!react-ui/**/*"
+    ]
+  }
+}
