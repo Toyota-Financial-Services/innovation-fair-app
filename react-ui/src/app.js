@@ -34,8 +34,8 @@ class App extends Component {
             var req = superagent.post('/model');
     
             req.field("CUSTOM_MODEL_ID", value.CUSTOM_MODEL_ID);
-            req.field("EINSTEIN_VISION_ACCOUNT_ID", value.EINSTEIN_VISION_ACCOUNT_ID);
-            req.field("EINSTEIN_VISION_PRIVATE_KEY", value.EINSTEIN_VISION_PRIVATE_KEY);
+            // req.field("EINSTEIN_VISION_ACCOUNT_ID", value.EINSTEIN_VISION_ACCOUNT_ID);
+            // req.field("EINSTEIN_VISION_PRIVATE_KEY", value.EINSTEIN_VISION_PRIVATE_KEY);
 
             console.log('modelParams',value);
 

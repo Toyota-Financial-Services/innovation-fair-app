@@ -84,26 +84,7 @@ class ModelParamsForm extends React.Component{
                         <Input placeholder="CUSTOM_MODEL_ID" />
                     )}
                 </FormItem>
-                <FormItem
-                    {...formItemLayout}
-                    label="EINSTEIN_VISION_ACCOUNT_ID"
-                >
-                    {getFieldDecorator('EINSTEIN_VISION_ACCOUNT_ID', {
-                        rules: [{ required: true, message: 'Please input EINSTEIN_VISION_ACCOUNT_ID!' }],
-                    })(
-                        <Input placeholder="EINSTEIN_VISION_ACCOUNT_ID" />
-                    )}
-                </FormItem>
-                <FormItem
-                    {...formItemLayout}
-                    label="EINSTEIN_VISION_PRIVATE_KEY"
-                >
-                    {getFieldDecorator('EINSTEIN_VISION_PRIVATE_KEY', {
-                        rules: [{ required: true, message: 'Please input EINSTEIN_VISION_PRIVATE_KEY!' }],
-                    })(
-                        <TextArea rows={6} placeholder="EINSTEIN_VISION_PRIVATE_KEY"/>
-                    )}
-                </FormItem>
+                
                 <FormItem {...tailFormItemLayout}>
                     <Button
                         type="primary"
