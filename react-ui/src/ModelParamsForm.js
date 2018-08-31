@@ -13,9 +13,9 @@ function hasErrors(fieldsError) {
 }
 
 const models = [
-    "damage inspection model",
-    "car model inspection model"
-];
+    {modelName:"damage inspection model",CUSTOM_MODEL_ID:"TK7ADBUQJPEYGIM752USX56SUY"},
+    {modelName:"car model inspection model", CUSTOM_MODEL_ID:"KQPBBWI4WFZGK35JN2PSECJEXY"},
+]
 
 class ModelParamsForm extends React.Component{
     componentDidMount() {
@@ -62,19 +62,19 @@ class ModelParamsForm extends React.Component{
             <Form layout="grid" onSubmit={this.handleSubmit}>
                 <FormItem
                     {...formItemLayout}
-                    label="MODEL"
+                    label="CUSTOM_MODEL_ID"
                 >
                     {getFieldDecorator('model', {
                         rules: [{ required: true, message: 'Please select MODEL!' }],
                     })(
-                        <Select>
+                        <Select value={optionState}>
                             {
-                                models.map(m=>(<Option value={m}>{m}</Option>))
+                                models.map(m=>(<Option value={m[1]}>{m[0]}</Option>))
                             }
                         </Select>
                     )}
                 </FormItem>
-                <FormItem
+                {/* <FormItem
                     {...formItemLayout}
                     label="CUSTOM_MODEL_ID"
                 >
@@ -83,7 +83,7 @@ class ModelParamsForm extends React.Component{
                     })(
                         <Input placeholder="CUSTOM_MODEL_ID" />
                     )}
-                </FormItem>
+                </FormItem> */}
                 
                 <FormItem {...tailFormItemLayout}>
                     <Button
