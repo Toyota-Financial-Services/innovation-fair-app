@@ -64,17 +64,17 @@ class ModelParamsForm extends React.Component{
                     {...formItemLayout}
                     label="MODEL"
                 >
-                    {getFieldDecorator('model', {
+                    {getFieldDecorator('CUSTOM_MODEL_ID', {
                         rules: [{ required: true, message: 'Please select MODEL!' }],
                     })(
                         <Select>
                             {
-                                models.map(m=>(<Option value={m}>{m}</Option>))
+                                models.map(m=>(<Option value={m}>{m.modelName}</Option>))
                             }
                         </Select>
                     )}
                 </FormItem>
-                <FormItem
+                {/* <FormItem
                     {...formItemLayout}
                     label="CUSTOM_MODEL_ID"
                 >
@@ -83,7 +83,7 @@ class ModelParamsForm extends React.Component{
                     })(
                         <Input placeholder="CUSTOM_MODEL_ID" />
                     )}
-                </FormItem>
+                </FormItem> */}
                 
                 <FormItem {...tailFormItemLayout}>
                     <Button
