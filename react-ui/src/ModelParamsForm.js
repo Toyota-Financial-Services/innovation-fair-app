@@ -67,7 +67,7 @@ class ModelParamsForm extends React.Component{
                     {getFieldDecorator('model', {
                         rules: [{ required: true, message: 'Please select MODEL!' }],
                     })(
-                        <Select value={optionState}>
+                        <Select>
                             {
                                 models.map(m=>(<Option value={m}>{m}</Option>))
                             }
