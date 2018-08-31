@@ -62,7 +62,7 @@ class ModelParamsForm extends React.Component{
             <Form layout="grid" onSubmit={this.handleSubmit}>
                 <FormItem
                     {...formItemLayout}
-                    label="CUSTOM_MODEL_ID"
+                    label="MODEL"
                 >
                     {getFieldDecorator('model', {
                         rules: [{ required: true, message: 'Please select MODEL!' }],
@@ -74,7 +74,7 @@ class ModelParamsForm extends React.Component{
                         </Select>
                     )}
                 </FormItem>
-                {/* <FormItem
+                <FormItem
                     {...formItemLayout}
                     label="CUSTOM_MODEL_ID"
                 >
@@ -83,7 +83,7 @@ class ModelParamsForm extends React.Component{
                     })(
                         <Input placeholder="CUSTOM_MODEL_ID" />
                     )}
-                </FormItem> */}
+                </FormItem>
                 
                 <FormItem {...tailFormItemLayout}>
                     <Button
