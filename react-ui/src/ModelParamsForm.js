@@ -69,7 +69,7 @@ class ModelParamsForm extends React.Component{
                     })(
                         <Select value={optionState}>
                             {
-                                models.map(m=>(<Option value={m[1]}>{m[0]}</Option>))
+                                models.map(m=>(<Option value={m.CUSTOM_MODEL_ID}>{m.modelName}</Option>))
                             }
                         </Select>
                     )}
