@@ -1,5 +1,5 @@
 /**
- * Created by 姚应龙 on 2018/8/28
+ * Created by Heran Guan on 2018/8/28
  */
 import React from 'react';
 import {Form, Icon, Input, Button, Select} from 'antd';
