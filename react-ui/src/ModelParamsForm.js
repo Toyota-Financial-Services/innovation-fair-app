@@ -1,5 +1,5 @@
 /**
- * Created by 姚应龙 on 2018/8/28
+ * Created by Heran Guan on 2018/8/28
  */
 import React from 'react';
 import {Form, Icon, Input, Button, Select} from 'antd';
@@ -13,9 +13,9 @@ function hasErrors(fieldsError) {
 }
 
 const models = [
-    "damage inspection model",
-    "car model inspection model"
-];
+    {modelName:"damage inspection model",CUSTOM_MODEL_ID:"TK7ADBUQJPEYGIM752USX56SUY"},
+    {modelName:"car model inspection model", CUSTOM_MODEL_ID:"KQPBBWI4WFZGK35JN2PSECJEXY"},
+]
 
 class ModelParamsForm extends React.Component{
     componentDidMount() {
@@ -64,17 +64,17 @@ class ModelParamsForm extends React.Component{
                     {...formItemLayout}
                     label="MODEL"
                 >
-                    {getFieldDecorator('model', {
+                    {getFieldDecorator('CUSTOM_MODEL_ID', {
                         rules: [{ required: true, message: 'Please select MODEL!' }],
                     })(
                         <Select>
                             {
-                                models.map(m=>(<Option value={m}>{m}</Option>))
+                                models.map(m=>(<Option value={m.CUSTOM_MODEL_ID}>{m.modelName}</Option>))
                             }
                         </Select>
                     )}
                 </FormItem>
-                <FormItem
+                {/* <FormItem
                     {...formItemLayout}
                     label="CUSTOM_MODEL_ID"
                 >
@@ -83,7 +83,7 @@ class ModelParamsForm extends React.Component{
                     })(
                         <Input placeholder="CUSTOM_MODEL_ID" />
                     )}
-                </FormItem>
+                </FormItem> */}
                 
                 <FormItem {...tailFormItemLayout}>
                     <Button

@@ -22,7 +22,7 @@ class App extends Component {
       modelParams: null
   };
 
-  //选择模型
+  //Select Model
     onSelModel = (error, value)=>{
 
         if (error) {
@@ -150,7 +150,7 @@ class App extends Component {
                   </div>
                   {modelParams ===null ?
                       <div style={maskProps}>
-                          请先选择模型，并设置模型参数
+                          Please Select Model First!
                       </div>
                       :null}
 
@@ -182,7 +182,7 @@ class App extends Component {
         // Backend expects 'file' reference
         req.attach('file', file, file.name);
 
-        //添加模型参数
+        //Add Model 
             /*.field("CUSTOM_MODEL_ID", modelParams.CUSTOM_MODEL_ID)
             .field("EINSTEIN_VISION_ACCOUNT_ID", modelParams.EINSTEIN_VISION_ACCOUNT_ID)
             .field("EINSTEIN_VISION_PRIVATE_KEY", modelParams.EINSTEIN_VISION_PRIVATE_KEY)*/
